@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "801002918292",
+    "project_id": "e-assess",
+    "storage_bucket": "e-assess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801002918292:android:92778ed0ae75db7a243f81",
+        "android_client_info": {
+          "package_name": "com.example.e_assess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801002918292-gaplnm9t4bqa70quatfjpl741cnvjssr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_assess",
+            "certificate_hash": "6aa484d95e53ade4152a724a046956f2142952be"
+          }
+        },
+        {
+          "client_id": "801002918292-c9jc4cflgpksppfc48e0p35pkn6akous.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZT7qBVTcHnhxx8SD1IcD7YQ10fDDmBaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801002918292-c9jc4cflgpksppfc48e0p35pkn6akous.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
