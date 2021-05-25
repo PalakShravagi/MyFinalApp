@@ -7,30 +7,22 @@
     tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="120dp"
-        android:layout_height="45dp"
-        android:layout_margin="40dp"
-        android:width="20dp"
-        android:background="@drawable/btnshape"
-        android:fontFamily="sans-serif-medium"
-        android:onClick="newActivity"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
+        android:id="@+id/loginid"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/gradientbtn"
         android:text="Login"
-        android:textColor="#FFFFFF"
+        android:textColor="#fff"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/emaillg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,7 +38,7 @@
         app:layout_constraintVertical_bias="0.245" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/pwdlg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/input_style"
@@ -59,6 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/emaillg"
         app:layout_constraintVertical_bias="0.1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

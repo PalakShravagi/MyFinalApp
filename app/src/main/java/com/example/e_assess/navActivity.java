@@ -3,6 +3,7 @@ package com.example.e_assess;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,11 +20,13 @@ import androidx.appcompat.widget.Toolbar;
 public class navActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        textView = (TextView)findViewById(R.id.textView);
+        textView.setText("this");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main_nav);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
