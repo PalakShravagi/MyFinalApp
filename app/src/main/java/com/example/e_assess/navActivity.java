@@ -1,5 +1,6 @@
 package com.example.e_assess;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -22,11 +23,26 @@ public class navActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     TextView textView;
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nav);
+        // for geting mail if user login
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.textView);
+        Intent intent = getIntent();
+        String mailid = intent.getStringExtra(LoginActivity.EXTRA_NAME);
+        navUsername.setText(mailid);
+        // for geting mail if user register for 1st time
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerVw = navigationView.getHeaderView(0);
+        TextView navUsrname = (TextView) headerVw.findViewById(R.id.textView);
+        Intent intnt = getIntent();
+        String mail = intnt.getStringExtra(RegisterActivity.EXTRA_NAME);
+        navUsrname.setText(mail);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);

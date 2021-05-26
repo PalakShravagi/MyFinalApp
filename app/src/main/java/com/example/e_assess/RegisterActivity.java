@@ -30,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText classcode;
     private FirebaseAuth auth;
     private DatabaseReference mRootRef;
+    public static final String EXTRA_NAME = "com.example.e_assess.extra.NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,9 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegisterActivity.this,navActivity.class));
+                            Intent intent = new Intent(RegisterActivity.this,navActivity.class);
+                            intent.putExtra(EXTRA_NAME,email);
+                            startActivity(intent);
                             finish();
                         }
                     }
