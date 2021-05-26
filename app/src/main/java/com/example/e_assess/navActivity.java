@@ -3,6 +3,7 @@ package com.example.e_assess;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,13 +24,14 @@ public class navActivity extends AppCompatActivity {
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        textView = (TextView)findViewById(R.id.textView);
-        textView.setText("this");
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main_nav);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +39,7 @@ public class navActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
