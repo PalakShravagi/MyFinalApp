@@ -23,11 +23,12 @@
         app:srcCompat="@drawable/useravatar1_01" />
 
     <TextView
-        android:id="@+id/txtviewemail"
-        android:layout_width="4dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text=""
         android:textSize="18sp"
         android:textStyle="bold" />
+
 </LinearLayout>
