@@ -2,15 +2,20 @@ package com.example.e_assess;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -29,6 +34,7 @@ public class navActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nav);
+
         // for geting mail if user login
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
@@ -36,6 +42,7 @@ public class navActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String mailid = intent.getStringExtra(LoginActivity.EXTRA_NAME);
         navUsername.setText(mailid);
+
         // for geting mail if user register for 1st time
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerVw = navigationView.getHeaderView(0);
@@ -46,6 +53,13 @@ public class navActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
+        // Log out option
+        NavigationView naviview = findViewById(R.id.nav_view);
+        naviview.getMenu().findItem(R.id.log_out).setOnMenuItemClickListener(menuItem -> {
+            logout();
+            return true;
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +82,12 @@ public class navActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(navActivity.this, choiceActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+        finish();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -81,4 +101,9 @@ public class navActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+    //public void logoutMethod(){
+    //    Toast.makeText(this, "Logout button clicked!!", Toast.LENGTH_SHORT).show();
+  //  }
 }
