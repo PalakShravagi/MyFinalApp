@@ -60,7 +60,12 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (txtPassword.length() < 6){
                     Toast.makeText(RegisterActivity.this, "Password too short!", Toast.LENGTH_SHORT).show();
                 } else {
+                    if(txtpost.equals("Admin") || txtpost.equals("admin") || txtpost.equals("User") || txtpost.equals("user")){
                     registerUser( txtEmail , txtPassword , txtcode,txtpost);
+                    }
+                    else{
+                        Toast.makeText(RegisterActivity.this, "Enter Admin or User ", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -88,10 +93,11 @@ public class RegisterActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email , password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-
                 HashMap<String , Object> map = new HashMap<>();
-                map.put("code" , code);
-                map.put("post", post);
+
+                    map.put("code" , code);
+                    map.put("post", post);
+
 
                 mRootRef.child("Users").child(auth.getCurrentUser().getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

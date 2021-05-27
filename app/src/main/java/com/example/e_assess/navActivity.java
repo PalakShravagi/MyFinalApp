@@ -24,6 +24,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.Set;
+
 public class navActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -100,6 +102,10 @@ public class navActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void feedbackAct(MenuItem item) {
+        startActivity(new Intent(navActivity.this, SettingAct.class));
     }
 
 

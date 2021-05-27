@@ -10,5 +10,6 @@
     <color name="centerColor">#0BABDC</color>
     <color name="startColor">#0D73DA</color>
     <color name="endColor">#25DBDD</color>
+    <color name="sample">#95018786</color>
 
 </resources>

@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/input_style"
         android:ems="10"
-        android:hint="OTP"
+        android:hint="password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:paddingBottom="5dp"
