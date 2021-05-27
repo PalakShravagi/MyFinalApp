@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingAct"
+        <activity android:name=".FeedbackAct"
             android:label="Feedback"
             android:parentActivityName=".navActivity">
         </activity>

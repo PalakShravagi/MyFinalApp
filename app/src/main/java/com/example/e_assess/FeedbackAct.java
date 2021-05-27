@@ -18,34 +18,34 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-/*
-public class SettingAct extends AppCompatActivity {
-  EditText fromid ;
-  EditText msg;
-  Button btn;
-  String toid = "pashk.firebase11@gmail.com";
-  String subject = "Feedback";
+
+public class FeedbackAct extends AppCompatActivity {
+    EditText fromid;
+    EditText msg;
+    Button btn;
+    String toid = "pashk.firebase11@gmail.com";
+    String subject = "Feedback";
     FirebaseDatabase fb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
 
-         btn.setOnClickListener(new View.OnClickListener() {
+        /* btn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  fromid = findViewById(R.id.editTextTextEmailAddress);
                  msg = findViewById(R.id.editTextTextMultiLine);
                  btn = findViewById(R.id.send);
                  if (TextUtils.isEmpty((CharSequence) fromid) || TextUtils.isEmpty((CharSequence) msg)){
-                     Toast.makeText(SettingAct.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(FeedbackAct.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
                  }
 
              }
          });
+    }*/
     }
+
 }
-
-
- */

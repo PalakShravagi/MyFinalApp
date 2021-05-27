@@ -5,17 +5,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
-import androidx.annotation.NonNull;
-import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -23,8 +19,6 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import java.util.Set;
 
 public class navActivity extends AppCompatActivity {
 
@@ -41,8 +35,10 @@ public class navActivity extends AppCompatActivity {
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = (TextView) headerView.findViewById(R.id.textView);
+        TextView newtxtv = navUsername;
         Intent intent = getIntent();
         String mailid = intent.getStringExtra(LoginActivity.EXTRA_NAME);
+        String newmail = mailid;
         navUsername.setText(mailid);
 
         // for geting mail if user register for 1st time
@@ -52,10 +48,16 @@ public class navActivity extends AppCompatActivity {
         Intent intnt = getIntent();
         String mail = intnt.getStringExtra(RegisterActivity.EXTRA_NAME);
         navUsrname.setText(mail);
+
+        //fab
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
 
+
+        //setting the email after coming back t0 activity
+        newtxtv.setText(mail);
+        navUsername.setText(newmail);
         // Log out option
         NavigationView naviview = findViewById(R.id.nav_view);
         naviview.getMenu().findItem(R.id.log_out).setOnMenuItemClickListener(menuItem -> {
@@ -105,7 +107,7 @@ public class navActivity extends AppCompatActivity {
     }
 
     public void feedbackAct(MenuItem item) {
-        startActivity(new Intent(navActivity.this, SettingAct.class));
+        startActivity(new Intent(navActivity.this, FeedbackAct.class));
     }
 
 
