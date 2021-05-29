@@ -103,11 +103,23 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this,navActivity.class);
-                            intent.putExtra(EXTRA_NAME,email);
-                            startActivity(intent);
-                            finish();
+                            if(post.equals("admin") || post.equals("Admin") || post.equals("ADMIN")){
+                                Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this,bottomActivity.class);
+                                intent.putExtra(EXTRA_NAME,email);
+                                startActivity(intent);
+                                Toast.makeText(RegisterActivity.this, "You login as Admin", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
+                            else{
+                                Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this,navActivity.class);
+                                intent.putExtra(EXTRA_NAME,email);
+                                startActivity(intent);
+                                Toast.makeText(RegisterActivity.this, "You login as Guide", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }
+
                         }
                     }
                 });
