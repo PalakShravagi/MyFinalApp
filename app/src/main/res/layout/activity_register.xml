@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    >
 
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:background="@drawable/input_style"
         android:ems="10"
         android:hint="username@gmail.com"
@@ -25,8 +26,8 @@
 
     <EditText
         android:id="@+id/idpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:background="@drawable/input_style"
         android:ems="10"
         android:hint="password"
@@ -41,9 +42,9 @@
 
     <Button
         android:id="@+id/idregister"
-        android:layout_width="148dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="136dp"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="176dp"
         android:background="@drawable/gradientbtn"
         android:text="Register"
         android:textColor="#fff"
@@ -56,11 +57,11 @@
 
     <EditText
         android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:background="@drawable/input_style"
         android:ems="10"
-        android:hint="Admin/User"
+        android:hint="Admin/Guide"
         android:inputType="text"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,8 +73,8 @@
 
     <EditText
         android:id="@+id/clcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:background="@drawable/input_style"
         android:ems="10"
         android:hint="Code e.g A2S3"

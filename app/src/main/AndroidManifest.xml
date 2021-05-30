@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.e_assess">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,31 +12,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
+
+
+        <activity android:name=".ForgetPasswordActivity"
+           android:parentActivityName=".LoginActivity" >
+
+        </activity>
+
         <activity
             android:name=".bottomActivity"
             android:label="@string/title_activity_bottom">
 
         </activity>
+
         <activity
             android:name=".FeedbackAct"
             android:label="Feedback"
             android:parentActivityName=".navActivity">
-
         </activity>
+
         <activity
             android:name=".RegisterActivity"
-            android:label="Register">
+            android:label="Register"
+            android:parentActivityName=".choiceActivity">
         </activity>
-        <activity android:name=".choiceActivity" />
+
+        <activity android:name=".choiceActivity" >
+        </activity>
+
         <activity
             android:name=".navActivity"
             android:label="@string/title_activity_main3"
             android:parentActivityName=".LoginActivity"
-            android:theme="@style/Theme.EAssess.NoActionBar" />
+            android:theme="@style/Theme.EAssess.NoActionBar">
+        </activity>
+
         <activity
             android:name=".LoginActivity"
             android:label="Login"
-            android:theme="@style/Theme.EAssess" />
+            android:theme="@style/Theme.EAssess"
+            android:parentActivityName=".choiceActivity"/>
         <activity
             android:name=".splashscreenActivity"
             android:theme="@style/Theme.EAssess.NoActionBar">

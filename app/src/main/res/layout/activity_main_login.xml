@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/loginid"
-        android:layout_width="148dp"
-        android:layout_height="47dp"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="220dp"
         android:background="@drawable/gradientbtn"
         android:text="Login"
@@ -23,8 +23,8 @@
 
     <EditText
         android:id="@+id/emaillg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="username@gmail.com"
         android:inputType="textEmailAddress"
@@ -39,8 +39,8 @@
 
     <EditText
         android:id="@+id/pwdlg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
         android:background="@drawable/input_style"
         android:ems="10"
         android:hint="password"
@@ -53,4 +53,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emaillg"
         app:layout_constraintVertical_bias="0.1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/forgetpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="forget password?"
+        android:textColor="#0C0C0C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>

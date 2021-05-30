@@ -20,14 +20,13 @@ public class choiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(choiceActivity.this,RegisterActivity.class));
-                finish();
+
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(choiceActivity.this,LoginActivity.class));
-                finish();
             }
         });
     }
