@@ -12,46 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
-
-
-        <activity android:name=".ForgetPasswordActivity"
-           android:parentActivityName=".LoginActivity" >
+        <activity android:name=".addStudent"
+            android:parentActivityName=".navActivity">
 
         </activity>
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:parentActivityName=".LoginActivity">
 
+        </activity>
         <activity
             android:name=".bottomActivity"
             android:label="@string/title_activity_bottom">
 
         </activity>
-
         <activity
             android:name=".FeedbackAct"
             android:label="Feedback"
             android:parentActivityName=".navActivity">
-        </activity>
 
+        </activity>
         <activity
             android:name=".RegisterActivity"
             android:label="Register"
             android:parentActivityName=".choiceActivity">
-        </activity>
 
-        <activity android:name=".choiceActivity" >
         </activity>
+        <activity android:name=".choiceActivity">
 
+        </activity>
         <activity
             android:name=".navActivity"
             android:label="@string/title_activity_main3"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/Theme.EAssess.NoActionBar">
-        </activity>
 
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:label="Login"
-            android:theme="@style/Theme.EAssess"
-            android:parentActivityName=".choiceActivity"/>
+            android:parentActivityName=".choiceActivity"
+            android:theme="@style/Theme.EAssess" />
         <activity
             android:name=".splashscreenActivity"
             android:theme="@style/Theme.EAssess.NoActionBar">
