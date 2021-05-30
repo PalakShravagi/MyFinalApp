@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
     public static final String EXTRA_NAME = "com.example.e_assess.extra.NAME";
     private FirebaseAuth auth;
     private  TextView txtforget;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)){
                     Toast.makeText(LoginActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
                 } else {
-                    ProgressBar progressBar = findViewById(R.id.progressBar);
+                    progressBar = findViewById(R.id.progressBar);
                     progressBar.setVisibility(View.VISIBLE);
                     loginUser(txt_email , txt_password);
                 }
@@ -60,16 +62,25 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
 
     private void loginUser(String mail, String pwd){
 
-         auth.signInWithEmailAndPassword(mail,pwd).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+         auth.signInWithEmailAndPassword(mail,pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
              @Override
-             public void onSuccess(AuthResult authResult) {
-                 Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                 Intent intent = new Intent(LoginActivity.this,navActivity.class);
-                 intent.putExtra(EXTRA_NAME,mail);
-                 startActivity(intent);
-                 finish();
+             public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
+                    Intent intent = new Intent(LoginActivity.this, navActivity.class);
+                    intent.putExtra(EXTRA_NAME, mail);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Toast.makeText(LoginActivity.this, "Failed to login !! Please check your credential", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
+                }
              }
+
          });
+
     }
 
     // for the forget password option:
