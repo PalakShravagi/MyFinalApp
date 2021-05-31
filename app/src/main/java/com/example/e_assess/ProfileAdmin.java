@@ -2,6 +2,7 @@ package com.example.e_assess;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,8 +24,12 @@ public class ProfileAdmin extends AppCompatActivity {
         txtmailshow = findViewById(R.id.showmail);
         txtmailshow.setText(mailid);
 
+    }
 
 
-
+    public void logoutProfile(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(ProfileAdmin.this, choiceActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+        finish();
     }
 }
