@@ -10,8 +10,12 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/export1"
+            android:icon="@drawable/groups"
             android:title="@string/export" />
+        <item
+            android:id="@+id/nav_assessment"
+            android:icon="@drawable/assess"
+            android:title="Assessment" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/download__v1"
