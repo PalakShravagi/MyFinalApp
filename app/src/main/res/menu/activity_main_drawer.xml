@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/groups"
-            android:title="@string/export" />
+            android:title="Groups" />
         <item
             android:id="@+id/nav_assessment"
             android:icon="@drawable/assess"
