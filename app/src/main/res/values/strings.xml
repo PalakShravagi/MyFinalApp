@@ -13,7 +13,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="export">Export</string>
     <string name="download">Download</string>
-    <string name="logout">Logout</string>
+
     <string name="username_gmail_com">username@gmail.com</string>
     <string name="feedback">Feedback</string>
     <string name="send_feedback">Send feedback</string>
@@ -21,4 +21,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="logout">Logout</string>
 </resources>

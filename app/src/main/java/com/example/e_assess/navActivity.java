@@ -2,16 +2,25 @@ package com.example.e_assess;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,50 +29,75 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class navActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     TextView textView;
     NavigationView navigationView;
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
+    TextView txt1 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nav);
 
-        // for geting mail if user login
+        // for gettig mail of user
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        String mailid = user.getEmail().toString();
+
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        TextView navUsername = (TextView) headerView.findViewById(R.id.textView);
-        TextView newtxtv = navUsername;
-        Intent intent = getIntent();
-        String mailid = intent.getStringExtra(LoginActivity.EXTRA_NAME);
-        String newmail = mailid;
-        navUsername.setText(mailid);
-
-        // for geting mail if user register for 1st time
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View headerVw = navigationView.getHeaderView(0);
-        TextView navUsrname = (TextView) headerVw.findViewById(R.id.textView);
-        Intent intnt = getIntent();
-        String mail = intnt.getStringExtra(RegisterActivity.EXTRA_NAME);
-        navUsrname.setText(mail);
-
-        //fab
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
+        txt1 = (TextView) headerView.findViewById(R.id.textView);
+        txt1.setText(mailid);
 
 
-        //setting the email after coming back t0 activity
-        newtxtv.setText(mail);
-        navUsername.setText(newmail);
+       // reference = FirebaseDatabase.getInstance().getReference("Users");
+       // userID = user.getUid();
+
+       // String mailll = reference.
+
+       /* reference.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Map<String, Object> td = (HashMap<String, Object>) snapshot.getValue();
+                if (td==null)return;
+                String code = td.get("code").toString() ;
+                Toast.makeText(navActivity.this, "hii " + code, Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+*/
+
+
+
+
+
+
+
+
         // Log out option
         NavigationView naviview = findViewById(R.id.nav_view);
         naviview.getMenu().findItem(R.id.log_out).setOnMenuItemClickListener(menuItem -> {
             logout();
             return true;
         });
+        //fab
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

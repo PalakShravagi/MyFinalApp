@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private DatabaseReference mRootRef;
     public static final String EXTRA_NAME = "com.example.e_assess.extra.NAME";
-
+public ProgressBar progressBr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,19 +53,22 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String txtEmail = email.getText().toString();
                 String txtPassword = password.getText().toString();
-                String txtpost = post.getText().toString();
-                String txtcode = classcode.getText().toString();
+                String txtpost = post.getText().toString().toUpperCase();
+                String txtcode = classcode.getText().toString().toUpperCase();
 
                 if (TextUtils.isEmpty(txtEmail) || TextUtils.isEmpty(txtPassword)||TextUtils.isEmpty(txtpost)||TextUtils.isEmpty(txtcode)  ){
                     Toast.makeText(RegisterActivity.this, "Empty credentials!", Toast.LENGTH_SHORT).show();
                 } else if (txtPassword.length() < 6){
                     Toast.makeText(RegisterActivity.this, "Password too short!", Toast.LENGTH_SHORT).show();
                 } else {
-                    if(txtpost.equals("Admin") || txtpost.equals("admin") || txtpost.equals("User") || txtpost.equals("user")){
+                    if(txtpost.equals("ADMIN")){
                     registerUser( txtEmail , txtPassword , txtcode,txtpost);
                     }
+                    else if(txtpost.equals("GUIDE")) {
+                        registerUser( txtEmail , txtPassword , txtcode,txtpost);
+                    }
                     else{
-                        Toast.makeText(RegisterActivity.this, "Enter Admin or User ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Enter Admin or Guide ", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -106,18 +110,27 @@ public class RegisterActivity extends AppCompatActivity {
                             if(post.equals("admin") || post.equals("Admin") || post.equals("ADMIN")){
                                 Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this,bottomActivity.class);
+                                progressBr = findViewById(R.id.regprogressbar);
+                                progressBr.setVisibility(View.VISIBLE);
                                 intent.putExtra(EXTRA_NAME,email);
                                 startActivity(intent);
                                 Toast.makeText(RegisterActivity.this, "You login as Admin", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
-                            else{
+                            else if(post.equals("Guide") || post.equals("guide") || post.equals("GUIDE")){
                                 Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this,navActivity.class);
+                                progressBr = findViewById(R.id.regprogressbar);
+                                progressBr.setVisibility(View.VISIBLE);
                                 intent.putExtra(EXTRA_NAME,email);
                                 startActivity(intent);
                                 Toast.makeText(RegisterActivity.this, "You login as Guide", Toast.LENGTH_SHORT).show();
                                 finish();
+                            }
+                            else{
+                                Toast.makeText(RegisterActivity.this, "Enter Admin/Guide ", Toast.LENGTH_SHORT).show();
+                                progressBr = findViewById(R.id.regprogressbar);
+                                progressBr.setVisibility(View.INVISIBLE);
                             }
 
                         }

@@ -18,8 +18,9 @@
     <style name="Theme.EAssess.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
-
+    </style>
+    <style name="nobackarrow">
+        <item name="android:homeAsUpIndicator">@drawable/hidearrow</item>
     </style>
 
     <style name="Theme.EAssess.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
