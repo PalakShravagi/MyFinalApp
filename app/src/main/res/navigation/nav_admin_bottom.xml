@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin_bottom"
+    app:startDestination="@+id/navigation_home_admin">
+    <fragment
+        android:id="@+id/navigation_home_admin"
+        android:name="com.example.e_assess.ui.HomeAdmin.HomeAdmin_fragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_admin" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.e_assess.ui.dashboard.DashboardFragment"
+        android:label="Groups"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.e_assess.ui.notifications.NotificationsFragment"
+        android:label="Students"
+        tools:layout="@layout/fragment_notifications" />
+
+</navigation>
