@@ -7,8 +7,8 @@
     <fragment
         android:id="@+id/navigation_home_admin"
         android:name="com.example.e_assess.ui.HomeAdmin.HomeAdmin_fragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home_admin" />
+        android:label="Teachers"
+       tools:layout="@layout/fragment_home_admin" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -16,10 +16,5 @@
         android:label="Groups"
         tools:layout="@layout/fragment_dashboard" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.e_assess.ui.notifications.NotificationsFragment"
-        android:label="Students"
-        tools:layout="@layout/fragment_notifications" />
 
 </navigation>

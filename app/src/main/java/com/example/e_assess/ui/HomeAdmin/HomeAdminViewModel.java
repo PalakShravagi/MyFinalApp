@@ -8,11 +8,5 @@ public class HomeAdminViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeAdminViewModel() {
 
-    }
-
-    public LiveData<String> getText() {
-        return mText;
-    }
 }

@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.e_assess.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="Assessment"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.e_assess.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Download"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

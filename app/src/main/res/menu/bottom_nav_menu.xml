@@ -3,18 +3,13 @@
 
     <item
         android:id="@+id/navigation_home_admin"
-        android:icon="@drawable/home__1_"
-        android:title="Home"
+        android:icon="@drawable/teachers"
+        android:title="Teachers"
         />
-+++
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/groups"
         android:title="Groups" />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/students"
-        android:title="Students" />
 
 </menu>

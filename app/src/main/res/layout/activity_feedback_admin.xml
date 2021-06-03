@@ -5,21 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FeedbackAdmin">
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="324dp"
-        android:layout_height="46dp"
-        android:background="@drawable/fdbackbtn"
-        android:ems="10"
-        android:hint="From : user@gmail.com"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
 
     <Button
         android:id="@+id/send"
@@ -36,8 +21,8 @@
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="322dp"
-        android:layout_height="211dp"
+        android:layout_width="340dp"
+        android:layout_height="367dp"
         android:background="@drawable/fdbackbtn"
         android:ems="10"
         android:gravity="start|top"
@@ -45,8 +30,10 @@
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
 
     <ImageView
         android:id="@+id/imageView2"

@@ -13,15 +13,17 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileAdmin extends AppCompatActivity {
     private FirebaseUser user;
-    TextView txtmailshow;
+    TextView txtmailshow ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_admin);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
+
         String mailid = user.getEmail().toString();
         txtmailshow = findViewById(R.id.showmail);
+
         txtmailshow.setText(mailid);
 
     }

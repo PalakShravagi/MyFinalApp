@@ -20,9 +20,15 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
 
     @Override
     protected void onBindViewHolder(@NonNull myviewholder holder, int position, @NonNull model model) {
-    holder.txtcode.setText(model.getCode());
+
         holder.txtname.setText(model.getName());
-        holder.txtpost.setText(model.getPost());
+
+            holder.txtname.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
+
     }
 
     @NonNull
@@ -34,15 +40,12 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
     }
 
     public class myviewholder extends RecyclerView.ViewHolder{
-        TextView txtcode;
+
         TextView txtname;
-        TextView txtpost;
+
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-
-            txtcode = itemView.findViewById(R.id.codetxt);
             txtname = itemView.findViewById(R.id.nametxt);
-            txtpost = itemView.findViewById(R.id.posttxt);
 
         }
     }

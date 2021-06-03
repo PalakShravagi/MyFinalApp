@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
@@ -14,38 +16,31 @@
         android:padding="15dp">
 
         <TextView
-            android:id="@+id/codetxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="This is Demo Name"
-            android:textColor="#000"
-            android:textSize="18sp"
-
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/nametxt"
-            android:layout_width="match_parent"
+            android:layout_width="317dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/codetxt"
+
             android:layout_marginLeft="10dp"
+
+            android:foregroundGravity="center"
             android:text="This is Course Name"
-
             android:textColor="#000"
             android:textSize="18sp" />
 
-
-        <TextView
-            android:id="@+id/posttxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/nametxt"
-            android:layout_marginLeft="10dp"
-            android:text="This is Email Name"
-
-            android:textColor="#000"
-            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="107dp"
+            android:layout_height="21dp"
+            android:layout_alignStart="@+id/nametxt"
+            android:layout_alignLeft="@+id/nametxt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="273dp"
+            android:layout_marginLeft="273dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:foregroundGravity="center"
+            tools:srcCompat="@drawable/more" />
 
 
     </RelativeLayout>
