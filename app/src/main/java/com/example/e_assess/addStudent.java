@@ -108,7 +108,7 @@ public class addStudent extends AppCompatActivity {
 //                hashMap.put("editTextStudent3",stu3);
 
                    // database.child("Users").child(Uid).child("groups").child(groupNo).setValue(studentData)
-                    mRootRef.child("Groups").child(auth.getCurrentUser().getUid()).setValue(studentData)
+                    mRootRef.child("Groups").child(auth.getCurrentUser().getUid()).child(groupNo).setValue(studentData)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

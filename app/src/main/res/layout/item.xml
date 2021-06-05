@@ -23,6 +23,7 @@
             android:id="@+id/txttopicname"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:fontFamily="sans-serif-black"
             android:gravity="center|center_vertical"
             android:text="Topic name"
             android:textSize="18sp"
@@ -32,6 +33,7 @@
             android:id="@+id/textstud1name"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:fontFamily="sans-serif-medium"
             android:padding="5dp"
             android:text="student1 name"
             android:textSize="18sp" />
@@ -39,18 +41,20 @@
         <TextView
             android:id="@+id/textstud2name"
             android:layout_width="match_parent"
-            android:textSize="18sp"
             android:layout_height="30dp"
+            android:fontFamily="sans-serif-medium"
             android:padding="5dp"
-            android:text="student2 name" />
+            android:text="student2 name"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textstud3name"
-            android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:fontFamily="sans-serif-medium"
             android:padding="5dp"
-            android:text="student3 name" />
+            android:text="student3 name"
+            android:textSize="18sp" />
 
 
     </LinearLayout>
