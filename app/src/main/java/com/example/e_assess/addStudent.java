@@ -54,12 +54,22 @@ public class addStudent extends AppCompatActivity {
     private Button save;
     private FirebaseDatabase firebase;
     private DatabaseReference database;
+    private FirebaseAuth auth;
+    private DatabaseReference mRootRef;
     FirebaseUser user ;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_student);
+
+        //
+        auth = FirebaseAuth.getInstance();
+        mRootRef = FirebaseDatabase.getInstance().getReference();
+
+
+
         firebase=FirebaseDatabase.getInstance();
         user= FirebaseAuth.getInstance().getCurrentUser();
         Uid=user.getUid();
@@ -86,6 +96,7 @@ public class addStudent extends AppCompatActivity {
                 } else {
                     Map<String, String> studentData = new HashMap<String, String>();
                     studentData.put("TopicName", topicName);
+                    studentData.put("GroupNo",groupNo);
                     studentData.put("Student1", stu1);
                     studentData.put("Student2", stu2);
                     studentData.put("Student3", stu3);
@@ -95,7 +106,9 @@ public class addStudent extends AppCompatActivity {
 //                hashMap.put("editTextStudent1",stu1);
 //                hashMap.put("editTextStudent2",stu2);
 //                hashMap.put("editTextStudent3",stu3);
-                    database.child("Users").child(Uid).child("groups").child(groupNo).setValue(studentData)
+
+                   // database.child("Users").child(Uid).child("groups").child(groupNo).setValue(studentData)
+                    mRootRef.child("Groups").child(auth.getCurrentUser().getUid()).setValue(studentData)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
