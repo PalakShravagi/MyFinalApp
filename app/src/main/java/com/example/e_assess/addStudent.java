@@ -87,10 +87,10 @@ public class addStudent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 groupNo = editTextgroupno.getText().toString();
-                topicName = editTextTopicName.getText().toString();
-                stu1 = editTextStudent1.getText().toString();
-                stu2 = editTextStudent2.getText().toString();
-                stu3 = editTextStudent3.getText().toString();
+                topicName = editTextTopicName.getText().toString().toUpperCase();
+                stu1 = editTextStudent1.getText().toString().toUpperCase();
+                stu2 = editTextStudent2.getText().toString().toUpperCase();
+                stu3 = editTextStudent3.getText().toString().toUpperCase();
                 if (groupNo.isEmpty() || topicName.isEmpty() || stu1.isEmpty() || stu2.isEmpty() || stu3.isEmpty()) {
                     Snackbar.make(v, "Missing Field!", BaseTransientBottomBar.LENGTH_LONG).show();
                 } else {
