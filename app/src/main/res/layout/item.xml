@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#95B2DFDB">
+        android:background="#00ACC2">
 
 
         <TextView
@@ -26,6 +26,7 @@
             android:fontFamily="sans-serif-black"
             android:gravity="center|center_vertical"
             android:text="Topic name"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,31 +34,36 @@
             android:id="@+id/textstud1name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
             android:padding="5dp"
             android:text="student1 name"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textstud2name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
             android:padding="5dp"
             android:text="student2 name"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textstud3name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
             android:padding="5dp"
             android:text="student3 name"
+            android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
 
