@@ -52,29 +52,24 @@ public class DashboardFragment extends Fragment {
                         // list.add(mod);
                           String stud1,stud2,stud3,topic,grpno;
                          //for(DataSnapshot data : dataSnapshot.getChildren()){
-                          grpno = data.child("GroupNo").getValue(String.class);
-                           stud1 = data.child("Student1").getValue(String.class);
+                             grpno = data.child("GroupNo").getValue(String.class);
+                             stud1 = data.child("Student1").getValue(String.class);
                              stud2 = data.child("Student2").getValue(String.class);
-                           stud3 = data.child("Student3").getValue(String.class);
+                             stud3 = data.child("Student3").getValue(String.class);
                              topic = data.child("TopicName").getValue(String.class);
-                            ModelDashboard model = new ModelDashboard(grpno,stud1,stud2,stud3,topic);
-                          list.add(model);
-                         // adapter.notifyDataSetChanged();
+                             ModelDashboard model = new ModelDashboard(grpno,stud1,stud2,stud3,topic);
+                             list.add(model);
+                            // adapter.notifyDataSetChanged();
 
                          //}
                      }
                      adapter.notifyDataSetChanged();
                  }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
-
-
         return root;
 
     }

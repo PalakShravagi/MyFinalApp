@@ -93,20 +93,32 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
                              logintype = td.get("post").toString().toUpperCase();
                             Log.i("Post of user",logintype);
                             if(logintype.equals("ADMIN")){
-                                Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.INVISIBLE);
-                                Intent intent = new Intent(LoginActivity.this, bottomActivity.class);
-                                // intent.putExtra(EXTRA_NAME, mail);
-                                startActivity(intent);
-                                finish();
+                                if(auth.getCurrentUser().isEmailVerified()){
+                                    Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    Intent intent = new Intent(LoginActivity.this, bottomActivity.class);
+                                    // intent.putExtra(EXTRA_NAME, mail);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                else{
+                                    Toast.makeText(LoginActivity.this, "Verify your email !", Toast.LENGTH_SHORT).show();
+                                }
+
                             }
                             else if(logintype.equals("GUIDE")){
-                                Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.INVISIBLE);
-                                Intent intent = new Intent(LoginActivity.this, navActivity.class);
-                                //   intent.putExtra(EXTRA_NAME, mail);
-                                startActivity(intent);
-                                finish();
+                                if(auth.getCurrentUser().isEmailVerified()){
+                                    Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    Intent intent = new Intent(LoginActivity.this, navActivity.class);
+                                    //   intent.putExtra(EXTRA_NAME, mail);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                else {
+                                    Toast.makeText(LoginActivity.this, "Verify your email id!!", Toast.LENGTH_SHORT).show();
+                                }
+
                             }
                         }
 

@@ -2,7 +2,6 @@ package com.example.e_assess;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -101,35 +99,43 @@ public ProgressBar progressBr;
             @Override
             public void onSuccess(AuthResult authResult) {
                 HashMap<String , Object> map = new HashMap<>();
-
                     map.put("code" , code);
                     map.put("post", post);
                     map.put("name",name);
-
 
                 mRootRef.child("Users").child(auth.getCurrentUser().getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            if(post.equals("admin") || post.equals("Admin") || post.equals("ADMIN")){
-                                Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(RegisterActivity.this,bottomActivity.class);
-                                progressBr = findViewById(R.id.regprogressbar);
-                                progressBr.setVisibility(View.VISIBLE);
-                                intent.putExtra(EXTRA_NAME,email);
-                                startActivity(intent);
-                                Toast.makeText(RegisterActivity.this, "You login as Admin", Toast.LENGTH_SHORT).show();
-                                finish();
-                            }
-                            else if(post.equals("Guide") || post.equals("guide") || post.equals("GUIDE")){
-                                Toast.makeText(RegisterActivity.this, "Register Succesfully!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(RegisterActivity.this,navActivity.class);
-                                progressBr = findViewById(R.id.regprogressbar);
-                                progressBr.setVisibility(View.VISIBLE);
-                                intent.putExtra(EXTRA_NAME,email);
-                                startActivity(intent);
-                                Toast.makeText(RegisterActivity.this, "You login as Guide", Toast.LENGTH_SHORT).show();
-                                finish();
+                            if(post.equals("admin") || post.equals("Admin") || post.equals("ADMIN")||post.equals("Guide") || post.equals("guide") || post.equals("GUIDE")){
+
+                                auth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            auth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    progressBr = findViewById(R.id.regprogressbar);
+                                                    progressBr.setVisibility(View.VISIBLE);
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(RegisterActivity.this, "Register Succesfully! Please verify your email ID !!", Toast.LENGTH_SHORT).show();
+                                                        Intent intent = new Intent(RegisterActivity.this,choiceActivity.class);
+                                                        startActivity(intent);
+                                                        finish();
+                                                    }
+                                                    else{
+                                                        Toast.makeText(RegisterActivity.this, "Register Succesfully! Please verify your email ID !!", Toast.LENGTH_SHORT).show();
+                                                        Intent intent = new Intent(RegisterActivity.this,choiceActivity.class);
+                                                        startActivity(intent);
+                                                        finish();
+                                                    }
+                                                }
+                                            });
+
+                                        }
+                                    }
+                                });
                             }
                             else{
                                 Toast.makeText(RegisterActivity.this, "Enter Admin/Guide ", Toast.LENGTH_SHORT).show();
