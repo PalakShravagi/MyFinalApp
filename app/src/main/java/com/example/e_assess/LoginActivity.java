@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
                                     finish();
                                 }
                                 else{
-                                    Toast.makeText(LoginActivity.this, "Verify your email !", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Verify your email ID !", Toast.LENGTH_SHORT).show();
                                 }
 
                             }

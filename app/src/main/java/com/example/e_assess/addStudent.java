@@ -50,7 +50,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 public class addStudent extends AppCompatActivity {
-    String groupNo,topicName,stu1,stu2,stu3,Uid;
+    String guidename,groupNo,topicName,stu1,stu2,stu3,Uid;
     private Button save;
     private FirebaseDatabase firebase;
     private DatabaseReference database;
@@ -75,9 +75,10 @@ public class addStudent extends AppCompatActivity {
         Uid=user.getUid();
         Toast.makeText(this, Uid, Toast.LENGTH_SHORT).show();
         database=firebase.getReference();
-        EditText editTextgroupno, editTextTopicName, editTextStudent1, editTextStudent2, editTextStudent3;
+        EditText editTextgroupno, editTextTopicName, editTextStudent1, editTextStudent2, editTextStudent3,editTextguidename;
         save = findViewById(R.id.savedatabase);
         editTextgroupno = (EditText) findViewById(R.id.editTextgroupno);
+        editTextguidename = (EditText) findViewById(R.id.guidename);
         editTextTopicName = (EditText) findViewById(R.id.editTextTopicName);
         editTextStudent1 = (EditText) findViewById(R.id.editTextStudent1);
         editTextStudent2 = (EditText) findViewById(R.id.editTextStudent2);
@@ -88,15 +89,17 @@ public class addStudent extends AppCompatActivity {
             public void onClick(View v) {
                 groupNo = editTextgroupno.getText().toString();
                 topicName = editTextTopicName.getText().toString().toUpperCase();
+                guidename = editTextguidename.getText().toString().toUpperCase();
                 stu1 = editTextStudent1.getText().toString().toUpperCase();
                 stu2 = editTextStudent2.getText().toString().toUpperCase();
                 stu3 = editTextStudent3.getText().toString().toUpperCase();
-                if (groupNo.isEmpty() || topicName.isEmpty() || stu1.isEmpty() || stu2.isEmpty() || stu3.isEmpty()) {
+                if (groupNo.isEmpty() || guidename.isEmpty()||topicName.isEmpty() || stu1.isEmpty() || stu2.isEmpty() || stu3.isEmpty()) {
                     Snackbar.make(v, "Missing Field!", BaseTransientBottomBar.LENGTH_LONG).show();
                 } else {
                     Map<String, String> studentData = new HashMap<String, String>();
-                    studentData.put("TopicName", topicName);
+                    studentData.put("GuideName",guidename);
                     studentData.put("GroupNo",groupNo);
+                    studentData.put("TopicName", topicName);
                     studentData.put("Student1", stu1);
                     studentData.put("Student2", stu2);
                     studentData.put("Student3", stu3);
@@ -108,12 +111,12 @@ public class addStudent extends AppCompatActivity {
 //                hashMap.put("editTextStudent3",stu3);
 
                    // database.child("Users").child(Uid).child("groups").child(groupNo).setValue(studentData)
-                    mRootRef.child("Groups").child(auth.getCurrentUser().getUid()).child(groupNo).setValue(studentData)
+                    mRootRef.child("Groups").child(auth.getCurrentUser().getUid()).child(guidename).child(groupNo).setValue(studentData)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(addStudent.this, "Added Successfully", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(addStudent.this, navActivity.class);
+                                    Intent intent = new Intent(addStudent.this, bottomActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

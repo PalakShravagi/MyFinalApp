@@ -2,68 +2,68 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="165dp"
+    android:layout_height="147dp"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:background="#95B2DFDB"
 
     android:padding="20dp"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="22dp"
     app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#00ACC2">
+        android:background="@drawable/card_border"
+        android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/txttopicname"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="32dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center|center_vertical"
             android:text="Topic name"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
+            android:textColor="#000"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textstud1name"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
-            android:padding="5dp"
+            android:padding="3dp"
             android:text="student1 name"
-            android:textColor="#FFFFFF"
+            android:textColor="#000"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textstud2name"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
-            android:padding="5dp"
+            android:padding="3dp"
             android:text="student2 name"
-            android:textColor="#FFFFFF"
+            android:textColor="#000"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textstud3name"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif-medium"
             android:padding="5dp"
             android:text="student3 name"
-            android:textColor="#FFFFFF"
+            android:textColor="#000"
             android:textSize="18sp" />
 
 

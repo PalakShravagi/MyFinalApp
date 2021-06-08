@@ -43,6 +43,20 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/input_layout_guide_name"
+                    android:textColorHint="#FFFFFF">
+                    <EditText
+                        android:id="@+id/guidename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Guide name"
+                        android:singleLine="false"
+                        android:textColor="#FFFFFF" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:id="@+id/input_layout_groupno"
                     android:textColorHint="#FFFFFF">
                     <EditText
@@ -68,6 +82,7 @@
                         android:textColor="#FFFFFF" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -97,10 +112,11 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/input_layout_student3"
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
                     android:textColorHint="#FFFFFF">
 
                     <EditText
@@ -116,9 +132,9 @@
                         android:layout_width="148dp"
                         android:layout_height="47dp"
                         android:layout_marginBottom="136dp"
-                        android:background="@drawable/gradientbtn"
+                        android:background="@color/browser_actions_bg_grey"
                         android:text="Save"
-                        android:textColor="#fff"
+                        android:textColor="#000"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"

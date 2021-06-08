@@ -3,6 +3,7 @@ package com.example.e_assess.ui.home;
 import android.content.Context;
 import android.graphics.ColorSpace;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +33,12 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     RecyclerView review;
     Context context;
-    private DatabaseReference reference;
+    private DatabaseReference reference,ref;
     private Recycle adapter;
     FirebaseAuth auth;
     private ArrayList<Guide> list;
     FirebaseUser user;
+    String userid, nameOfGuide;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,36 +52,58 @@ public class HomeFragment extends Fragment {
         user = FirebaseAuth.getInstance().getCurrentUser();
         String Uid = user.getUid().toString();
         review.setAdapter(adapter);
-        reference = FirebaseDatabase.getInstance().getReference().child("Groups").child(Uid);
-        reference.addValueEventListener(new ValueEventListener() {
+
+    //    for getting the details of the person who logg in !!
+        userid = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+        ref = FirebaseDatabase.getInstance().getReference().child("Users").child(userid);
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                 final String nameOfGuide = snapshot.child("name").getValue(String.class);
+                    Log.i("nameg the md",nameOfGuide);
+                reference = FirebaseDatabase.getInstance().getReference().child("Groups");
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        //Groups
+                        for (DataSnapshot datas : snapshot.getChildren()) {
+                            //id under the group
+                            for (DataSnapshot data : datas.getChildren()) {
+                                //name of guide
+                                String s  = data.getKey();
+                                if(s.equals(nameOfGuide)){
+                                    for (DataSnapshot dat : data.getChildren()) {
+                                        String stud1, stud2, stud3, topic, grpno;
+                                        grpno = dat.child("GroupNo").getValue(String.class);
+                                        stud1 = dat.child("Student1").getValue(String.class);
+                                        stud2 = dat.child("Student2").getValue(String.class);
+                                        stud3 = dat.child("Student3").getValue(String.class);
+                                        topic = dat.child("TopicName").getValue(String.class);
+                                        Guide model = new Guide(grpno, stud1, stud2, stud3, topic);
+                                        list.add(model);
+                                    }
+                                    adapter.notifyDataSetChanged();
+                                }
+                            }
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                for (DataSnapshot data : snapshot.getChildren()) {
-                    //   ModelDashboard mod = data.getValue(ModelDashboard.class);
-                    // list.add(mod);
-                    String stud1, stud2, stud3, topic, grpno;
-                    //for(DataSnapshot data : dataSnapshot.getChildren()){
-                    grpno = data.child("GroupNo").getValue(String.class);
-                    stud1 = data.child("Student1").getValue(String.class);
-                    stud2 = data.child("Student2").getValue(String.class);
-                    stud3 = data.child("Student3").getValue(String.class);
-                    topic = data.child("TopicName").getValue(String.class);
-                    Guide model = new Guide(grpno, stud1, stud2, stud3, topic);
-                    list.add(model);
-                    // adapter.notifyDataSetChanged();
-
-                    //}
-                }
-                adapter.notifyDataSetChanged();
+                    }
+                });
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+        //Log.i("name of the guide ",name);
+
+
+        // end of the trial
+
 
 
         return root;

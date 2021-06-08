@@ -24,14 +24,5 @@
         layout="@layout/content_main"
         android:background="#32BEA6" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="97dp"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#0FA5B8"
-        app:fabSize="auto"
-        app:srcCompat="@drawable/plus_math" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

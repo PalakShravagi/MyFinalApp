@@ -1,26 +1,19 @@
 package com.example.e_assess;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.os.Bundle;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.example.e_assess.ui.dashboard.DashboardFragment;
-import com.example.e_assess.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -42,6 +35,21 @@ public class bottomActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         ///
+
+
+      //  Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+       //  FloatingActionButton fab = findViewById(R.id.fabbed);
+
+
+      /* fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(bottomActivity.this, "hii palak", Toast.LENGTH_SHORT).show();
+               // startActivity(new Intent(bottomActivity.this,addStudent.class));
+            }
+        });
+*/
 
     }
 
@@ -75,6 +83,10 @@ public class bottomActivity extends AppCompatActivity {
 
    }
 
+    public void fabclick(View view) {
+      //  Toast.makeText(this, "hii this is onclick method", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(bottomActivity.this,addStudent.class));
+    }
 }
 
 

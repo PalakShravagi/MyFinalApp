@@ -52,14 +52,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/idregister"
         android:layout_width="195dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="152dp"
         android:background="@drawable/gradientbtn"
         android:text="Register"
         android:textColor="#fff"
@@ -85,20 +84,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.368" />
 
-    <EditText
-        android:id="@+id/clcode"
-        android:layout_width="278dp"
-        android:layout_height="47dp"
-        android:background="@drawable/input_style"
-        android:ems="10"
-        android:hint="Code e.g A2S3"
-        android:inputType="text"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ProgressBar
         android:id="@+id/regprogressbar"

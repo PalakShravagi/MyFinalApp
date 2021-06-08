@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.admingroup.GroupsShowAdminViewModel"
+        <activity android:name=".GroupsShowAdminViewModel"
             ></activity>
         <activity
             android:name=".ProfileAdmin"
@@ -22,7 +22,7 @@
             android:parentActivityName=".bottomActivity"></activity>
         <activity
             android:name=".addStudent"
-            android:parentActivityName=".navActivity"></activity>
+            android:parentActivityName=".navActivity"  ></activity>
         <activity
             android:name=".ForgetPasswordActivity"
             android:parentActivityName=".LoginActivity"></activity>

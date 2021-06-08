@@ -108,31 +108,19 @@
             android:layout_below="@id/frameLayout"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/editgroup"
-                android:layout_width="24.0dip"
-                android:layout_height="24.0dip"
-                android:layout_gravity="bottom|center|right"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/editbutton"
-                android:clickable="true"
-                android:cropToPadding="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false" />
 
             <ImageButton
-                android:id="@+id/imageButtonCheck"
+                android:id="@+id/deleteicon"
                 android:layout_width="24.0dip"
                 android:layout_height="24.0dip"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="bottom|center|right"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/editgroup"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/del"
                 android:clickable="true"
                 android:cropToPadding="false"
@@ -140,18 +128,17 @@
                 android:focusableInTouchMode="false" />
 
             <ImageButton
-                android:id="@+id/imageButtonGraph"
+                android:id="@+id/assignmarksicon"
                 android:layout_width="24.0dip"
                 android:layout_height="24.0dip"
                 android:layout_gravity="bottom|center|right"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageButtonCheck"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toRightOf="@id/deleteicon"
                 android:background="@drawable/result"
                 android:clickable="true" />
-
 
 
         </RelativeLayout>

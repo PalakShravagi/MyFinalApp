@@ -40,7 +40,7 @@ public ProgressBar progressBr;
         email = findViewById(R.id.email);
         password = findViewById(R.id.idpassword);
         post = findViewById(R.id.post);
-        classcode = findViewById(R.id.clcode);
+       // classcode = findViewById(R.id.clcode);
         register = findViewById(R.id.idregister);
         name = findViewById(R.id.name);
 
@@ -54,19 +54,19 @@ public ProgressBar progressBr;
                 String txtEmail = email.getText().toString();
                 String txtPassword = password.getText().toString();
                 String txtpost = post.getText().toString().toUpperCase();
-                String txtcode = classcode.getText().toString().toUpperCase();
+           //     String txtcode = classcode.getText().toString().toUpperCase();
                 String txtname = name.getText().toString().toUpperCase();
 
-                if (TextUtils.isEmpty(txtEmail) || TextUtils.isEmpty(txtPassword)||TextUtils.isEmpty(txtpost)||TextUtils.isEmpty(txtcode)||TextUtils.isEmpty(txtname)  ){
+                if (TextUtils.isEmpty(txtEmail) || TextUtils.isEmpty(txtPassword)||TextUtils.isEmpty(txtpost)||TextUtils.isEmpty(txtname)  ){
                     Toast.makeText(RegisterActivity.this, "Empty credentials!", Toast.LENGTH_SHORT).show();
                 } else if (txtPassword.length() < 6){
                     Toast.makeText(RegisterActivity.this, "Password too short!", Toast.LENGTH_SHORT).show();
                 } else {
                     if(txtpost.equals("ADMIN")){
-                    registerUser( txtname,txtEmail , txtPassword , txtcode,txtpost);
+                    registerUser( txtname,txtEmail , txtPassword ,txtpost);
                     }
                     else if(txtpost.equals("GUIDE")) {
-                        registerUser( txtname,txtEmail , txtPassword , txtcode,txtpost);
+                        registerUser( txtname,txtEmail , txtPassword ,txtpost);
                     }
                     else{
                         Toast.makeText(RegisterActivity.this, "Enter Admin or Guide ", Toast.LENGTH_SHORT).show();
@@ -93,16 +93,15 @@ public ProgressBar progressBr;
     }
 
 */
-    private void registerUser(String name ,String email, String password ,String code ,String post) {
+    private void registerUser(String name ,String email, String password ,String post) {
 
         auth.createUserWithEmailAndPassword(email , password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
                 HashMap<String , Object> map = new HashMap<>();
-                    map.put("code" , code);
+               //     map.put("code" , code);
                     map.put("post", post);
                     map.put("name",name);
-
                 mRootRef.child("Users").child(auth.getCurrentUser().getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -155,8 +154,8 @@ public ProgressBar progressBr;
             }
         });
 
+       }
     }
-}
 
 
 

@@ -80,14 +80,6 @@ public class navActivity extends AppCompatActivity {
             }
         });
 */
-
-
-
-
-
-
-
-
         // Log out option
         NavigationView naviview = findViewById(R.id.nav_view);
         naviview.getMenu().findItem(R.id.log_out).setOnMenuItemClickListener(menuItem -> {
@@ -97,14 +89,8 @@ public class navActivity extends AppCompatActivity {
         //fab
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
+       // FloatingActionButton fab = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              startActivity(new Intent(navActivity.this,addStudent.class));
-            }
-        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
