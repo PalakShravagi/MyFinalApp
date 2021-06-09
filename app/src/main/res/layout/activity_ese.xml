@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Assignmarksise">
+    tools:context=".Ese">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,32 +32,29 @@
 
 
                     <TextView
-                        android:id="@+id/textViewGroup"
+                        android:id="@+id/mse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="ISE 1 Marks"
+                        android:text="ESE Marks"
                         android:textColor="#000000"
                         android:textSize="24sp"
-                        android:gravity="center"
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
                 <TextView
-                    android:id="@+id/stud1ise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="1st   Student Name"
+                    android:id="@+id/stud1ese"
                     android:textColor="#000000"
-                    android:gravity="center"
                     android:textSize="24sp"
                     android:textStyle="bold" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric1"
+                    android:id="@+id/rubric1ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -68,22 +65,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:text="Objective achieved :"
                             android:layout_weight="1"
-                            android:text="Problem Statement Identification :"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
-
                         <EditText
-                            android:id="@+id/rubric1stu1"
+                            android:id="@+id/rubric1esestu1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
+                            android:gravity="center"
                             android:layout_weight="3"
                             android:singleLine="false"
-                            android:inputType="number"
-
-                            android:gravity="center"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
 
@@ -91,7 +85,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric2"
+                    android:id="@+id/rubric2ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -102,17 +96,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Objective defined :"
-                            android:textColor="#FFFFFF"
+                            android:text="Result and Analysis :"
                             android:layout_weight="1"
+                            android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric2stu1"
+                            android:id="@+id/rubric2esestu1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
-                            android:inputType="number"
                             android:gravity="center"
                             android:layout_weight="3"
                             android:singleLine="false"
@@ -122,7 +115,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric3"
+                    android:id="@+id/rubric3ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -134,27 +127,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Tools and Methodology :"
+                            android:text="Novelty :"
                             android:layout_weight="1"
                             android:textColor="#FFFFFF"
-
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric3stu1"
+                            android:id="@+id/rubric3esestu1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
                             android:gravity="center"
                             android:layout_weight="3"
-                            android:inputType="number"
                             android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/rubric4"
+                        android:id="@+id/rubric4ese"
                         android:textColorHint="#FFFFFF">
 
                         <LinearLayout
@@ -166,20 +157,18 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Question And Answers :"
+                                android:text="Presentation Skills :"
                                 android:textColor="#FFFFFF"
                                 android:layout_weight="1"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
                             <EditText
-                                android:id="@+id/rubric4stu1"
+                                android:id="@+id/rubric4esestu1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="out of 5"
                                 android:gravity="center"
                                 android:layout_weight="3"
-                                android:hint="out of 5"
-
-                                android:inputType="number"
                                 android:singleLine="false"
                                 android:textColor="#FFFFFF" />
                         </LinearLayout>
@@ -189,7 +178,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric5"
+                    android:id="@+id/rubric5ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -201,21 +190,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Presentation Skills :"
+                            android:text="Application(social,dept,eco,etc) :"
                             android:textColor="#FFFFFF"
                             android:layout_weight="1"
                             android:textSize="16sp"
-
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric5stu1"
+                            android:id="@+id/rubric5esestu1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
                             android:gravity="center"
-                            android:inputType="number"
                             android:layout_weight="3"
-
                             android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
@@ -223,7 +209,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/total1"
+                    android:id="@+id/total1ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -242,9 +228,8 @@
 
                             android:textSize="16sp"
                             android:textStyle="bold" />
-
                         <TextView
-                            android:id="@+id/Total"
+                            android:id="@+id/Totalese"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -253,14 +238,11 @@
                             android:singleLine="false"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
-
-
                     </LinearLayout>
                 </com.google.android.material.textfield.TextInputLayout>
-
                 <Button
 
-                    android:id="@+id/totals1"
+                    android:id="@+id/totaleses1"
                     android:layout_width="148dp"
                     android:layout_height="47dp"
                     android:layout_gravity="center"
@@ -285,7 +267,7 @@
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:id="@+id/blank"
+                        android:id="@+id/blankese"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -294,20 +276,19 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
                 <TextView
-                    android:id="@+id/stud2ise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="2nd  Student Name"
                     android:textColor="#000000"
+                    android:id="@+id/stud2ese"
                     android:textSize="24sp"
                     android:textStyle="bold" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric12"
+                    android:id="@+id/rubric12ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -318,21 +299,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Problem Statement Identification :"
+                            android:text="Objective achieved :"
                             android:layout_weight="1"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric1stu2"
+                            android:id="@+id/rubric1esestu2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
                             android:layout_weight="3"
-                            android:singleLine="false"
-                            android:inputType="number"
-
                             android:gravity="center"
+                            android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
 
@@ -340,7 +319,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric22"
+                    android:id="@+id/rubric22ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -351,18 +330,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Objective defined :"
+                            android:text="Result and Analysis :"
                             android:textColor="#FFFFFF"
                             android:layout_weight="1"
-
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric2stu2"
+                            android:id="@+id/rubric2esestu2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
-                            android:inputType="number"
                             android:gravity="center"
                             android:layout_weight="3"
                             android:singleLine="false"
@@ -372,7 +349,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric32"
+                    android:id="@+id/rubric32ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -384,13 +361,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Tools and Methodology :"
+                            android:text="Novelty :"
                             android:layout_weight="1"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric3stu2"
+                            android:id="@+id/rubric3esestu2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
@@ -402,7 +379,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/rubric42"
+                        android:id="@+id/rubric42ese"
                         android:textColorHint="#FFFFFF">
 
                         <LinearLayout
@@ -414,15 +391,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Question And Answers :"
-                                android:textColor="#FFFFFF"
+                                android:text="Presentation Skills :"
                                 android:layout_weight="1"
+                                android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
                             <EditText
-                                android:id="@+id/rubric4stu2"
+                                android:id="@+id/rubric4esestu2"
                                 android:layout_width="match_parent"
-                                android:inputType="number"
                                 android:layout_height="wrap_content"
                                 android:hint="out of 5"
                                 android:gravity="center"
@@ -436,7 +412,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric52"
+                    android:id="@+id/rubric52ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -448,27 +424,26 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Presentation Skills :"
+                            android:text="Application(social,dept,eco,etc) :"
+                            android:layout_weight="1"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
-                            android:layout_weight="1"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric5stu2"
+                            android:id="@+id/rubric5esestu2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
-                            android:singleLine="false"
-                            android:inputType="number"
-                            android:gravity="center"
                             android:layout_weight="3"
+                            android:gravity="center"
+                            android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/total11"
+                    android:id="@+id/total11ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -484,11 +459,12 @@
                             android:text="Total Marks :"
                             android:textColor="#FFFFFF"
                             android:layout_weight="1"
+
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/Total2"
+                            android:id="@+id/Total2ese"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -497,13 +473,11 @@
                             android:singleLine="false"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
-
                     </LinearLayout>
                 </com.google.android.material.textfield.TextInputLayout>
-
                 <Button
 
-                    android:id="@+id/totals2"
+                    android:id="@+id/totaleses2"
                     android:layout_width="148dp"
                     android:layout_height="47dp"
                     android:layout_gravity="center"
@@ -528,7 +502,7 @@
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:id="@+id/blank3"
+                        android:id="@+id/blank3ese"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -537,20 +511,19 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
                 <TextView
-                    android:id="@+id/stud3ise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="3rd  Student Name"
                     android:textColor="#000000"
+                    android:id="@+id/stud3ese"
                     android:textSize="24sp"
                     android:textStyle="bold" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric13"
+                    android:id="@+id/rubric13ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -561,19 +534,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Problem Statement Identification :"
+                            android:text="Objective achieved :"
                             android:layout_weight="1"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric1stu3"
+                            android:id="@+id/rubric1esestu3"
                             android:layout_width="match_parent"
-                            android:gravity="center"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
+                            android:gravity="center"
                             android:layout_weight="3"
-                            android:inputType="number"
                             android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
@@ -582,7 +554,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric23"
+                    android:id="@+id/rubric23ese"
                     android:textColorHint="#FFFFFF">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -593,19 +565,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Objective Defined :"
+                            android:text="Result and Analysis :"
                             android:layout_weight="1"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric2stu3"
+                            android:id="@+id/rubric2esestu3"
                             android:layout_width="match_parent"
-                            android:gravity="center"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
                             android:layout_weight="3"
-                            android:inputType="number"
+                            android:gravity="center"
                             android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
@@ -613,7 +584,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric33"
+                    android:id="@+id/rubric33ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -625,26 +596,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Tools and Methodology :"
-                            android:textColor="#FFFFFF"
+                            android:text="Novelty :"
                             android:layout_weight="1"
+                            android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric3stu3"
+                            android:id="@+id/rubric3esestu3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
-                            android:singleLine="false"
-                            android:inputType="number"
                             android:layout_weight="3"
                             android:gravity="center"
+                            android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/rubric43"
+                        android:id="@+id/rubric43ese"
                         android:textColorHint="#FFFFFF">
 
                         <LinearLayout
@@ -656,20 +626,19 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Question And Answers :"
-                                android:textColor="#FFFFFF"
+                                android:text="Presentation Skills :"
                                 android:layout_weight="1"
+                                android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
                             <EditText
-                                android:id="@+id/rubric4stu3"
+                                android:id="@+id/rubric4esestu3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="out of 5"
-                                android:gravity="center"
                                 android:layout_weight="3"
+                                android:gravity="center"
                                 android:singleLine="false"
-                                android:inputType="number"
                                 android:textColor="#FFFFFF" />
                         </LinearLayout>
 
@@ -678,7 +647,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rubric53"
+                    android:id="@+id/rubric53ese"
                     android:textColorHint="#FFFFFF">
 
                     <LinearLayout
@@ -690,28 +659,26 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:text="Presentation Skills :"
-                            android:textColor="#FFFFFF"
+                            android:text="Application(social,dept,eco,etc) :"
                             android:layout_weight="1"
+                            android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
-                            android:id="@+id/rubric5stu3"
+                            android:id="@+id/rubric5esestu3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="out of 5"
-                            android:inputType="number"
-                            android:singleLine="false"
                             android:gravity="center"
                             android:layout_weight="3"
+                            android:singleLine="false"
                             android:textColor="#FFFFFF" />
                     </LinearLayout>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/total111"
+                        android:id="@+id/total111ese"
                         android:textColorHint="#FFFFFF">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -723,27 +690,26 @@
                                 android:layout_height="40dp"
                                 android:layout_marginLeft="10dp"
                                 android:text="Total Marks :"
-                                android:textColor="#FFFFFF"
                                 android:layout_weight="1"
+                                android:textColor="#FFFFFF"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/Total3"
+                                android:id="@+id/Total3ese"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:gravity="center"
                                 android:hint="out of 25"
                                 android:layout_weight="3"
                                 android:singleLine="false"
-
                                 android:textColor="#FFFFFF"
                                 android:textSize="18sp" />
-
                         </LinearLayout>
+
                         <Button
 
-                            android:id="@+id/totals3"
+                            android:id="@+id/totaleses3"
                             android:layout_width="148dp"
                             android:layout_height="47dp"
                             android:layout_gravity="center"
@@ -759,11 +725,9 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.498"
                             app:layout_constraintStart_toStartOf="parent" />
-
-
                         <Button
 
-                            android:id="@+id/savemarksise1"
+                            android:id="@+id/savedatabaseese"
                             android:layout_width="148dp"
                             android:layout_height="47dp"
                             android:layout_gravity="center"

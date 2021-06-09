@@ -99,10 +99,14 @@ public class HomeFragment extends Fragment {
 
             }
         });
+        //Log.i("name of the guide ",name);
+
+
+        // end of the trial
+
+
 
         return root;
 
     }
-
 }
-

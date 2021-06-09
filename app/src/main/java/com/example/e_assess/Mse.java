@@ -1,4 +1,9 @@
 package com.example.e_assess;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -51,12 +56,12 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-public class Assignmarksise extends AppCompatActivity {
+public class Mse extends AppCompatActivity {
     String  stu11,stu12,stu13,stu14,stu15,stu21,stu22,stu23,stu24,stu25,stu31,stu32,stu34,stu35,stu33,finalmarksstud1,finalmarksstud2,finalmarksstud3;
     TextView stu1total,stu2total,stu3total;
     EditText stu1R1,stu1R2,stu1R3,stu1R4,stu1R5,stu2R1,stu2R2,stu2R3,stu2R4,stu2R5,stu3R1,stu3R2,stu3R3,stu3R4,stu3R5;
     String Uid;
-    private Button save,totals11,totals22,totals33;
+    private Button save,totals11ise2,totals22ise2,totals33ise2;
     TextView stud1,stud2,stud3;
     private FirebaseDatabase firebase;
     private DatabaseReference database;
@@ -67,12 +72,12 @@ public class Assignmarksise extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assignmarks);
+        setContentView(R.layout.activity_mse);
 
         // for taking the names of student from the activity.
-        stud1 = findViewById(R.id.stud1ise);
-        stud2 = findViewById(R.id.stud2ise);
-        stud3 = findViewById(R.id.stud3ise);
+        stud1 = findViewById(R.id.stud1mse);
+        stud2 = findViewById(R.id.stud2mse);
+        stud3 = findViewById(R.id.stud3mse);
         stud1.setText(getIntent().getStringExtra("stud1name"));
         stud2.setText(getIntent().getStringExtra("stud2name"));
         stud3.setText(getIntent().getStringExtra("stud3name"));
@@ -92,28 +97,28 @@ public class Assignmarksise extends AppCompatActivity {
         Uid=user.getUid();
         Toast.makeText(this, Uid, Toast.LENGTH_SHORT).show();
         database=firebase.getReference();
-        totals11=findViewById(R.id.totals1);
-        totals22=findViewById(R.id.totals2);
-        totals33=findViewById(R.id.totals3);
-        save = findViewById(R.id.savemarksise1);
-        stu1R1=(EditText)findViewById(R.id.rubric1stu1) ;
-        stu1R2=(EditText)findViewById(R.id.rubric2stu1);
-        stu1R3=(EditText)findViewById(R.id.rubric3stu1);
-        stu1R4=(EditText)findViewById(R.id.rubric4stu1);
-        stu1R5=(EditText)findViewById(R.id.rubric5stu1);
-        stu1total=(TextView) findViewById(R.id.Total);
-        stu2R1=(EditText)findViewById(R.id.rubric1stu2) ;
-        stu2R2=(EditText)findViewById(R.id.rubric2stu2) ;
-        stu2R3=(EditText)findViewById(R.id.rubric3stu2) ;
-        stu2R4=(EditText)findViewById(R.id.rubric4stu2) ;
-        stu2R5=(EditText)findViewById(R.id.rubric5stu2) ;
-        stu2total=(TextView) findViewById(R.id.Total2);
-        stu3R1=(EditText)findViewById(R.id.rubric1stu3);
-        stu3R2=(EditText)findViewById(R.id.rubric2stu3);
-        stu3R3=(EditText)findViewById(R.id.rubric3stu3);
-        stu3R4=(EditText)findViewById(R.id.rubric4stu3);
-        stu3R5=(EditText)findViewById(R.id.rubric5stu3);
-        stu3total= (TextView)findViewById(R.id.Total3) ;
+        totals11ise2=findViewById(R.id.totalmses1);
+        totals22ise2=findViewById(R.id.totalmses2);
+        totals33ise2=findViewById(R.id.totalmses3);
+        save = findViewById(R.id.savedatabasemse);
+        stu1R1=(EditText)findViewById(R.id.rubric1msestu1) ;
+        stu1R2=(EditText)findViewById(R.id.rubric2msestu1);
+        stu1R3=(EditText)findViewById(R.id.rubric3msestu1);
+        stu1R4=(EditText)findViewById(R.id.rubric4msestu1);
+        stu1R5=(EditText)findViewById(R.id.rubric5msestu1);
+        stu1total=(TextView) findViewById(R.id.Totalmse);
+        stu2R1=(EditText)findViewById(R.id.rubric1msestu2) ;
+        stu2R2=(EditText)findViewById(R.id.rubric2msestu2) ;
+        stu2R3=(EditText)findViewById(R.id.rubric3msestu2) ;
+        stu2R4=(EditText)findViewById(R.id.rubric4msestu2) ;
+        stu2R5=(EditText)findViewById(R.id.rubric5msestu2) ;
+        stu2total=(TextView) findViewById(R.id.Total2mse);
+        stu3R1=(EditText)findViewById(R.id.rubric1msestu3);
+        stu3R2=(EditText)findViewById(R.id.rubric2msestu3);
+        stu3R3=(EditText)findViewById(R.id.rubric3msestu3);
+        stu3R4=(EditText)findViewById(R.id.rubric4msestu3);
+        stu3R5=(EditText)findViewById(R.id.rubric5msestu3);
+        stu3total= (TextView)findViewById(R.id.Total3mse) ;
 
         /*TextWatcher textWatcher=new TextWatcher() {
             @Override
@@ -211,7 +216,7 @@ public class Assignmarksise extends AppCompatActivity {
         stu3R4.addTextChangedListener(textWatcher2);
         stu3R5.addTextChangedListener(textWatcher2);*/
 
-        totals11.setOnClickListener(new View.OnClickListener() {
+        totals11ise2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stu11=stu1R1.getText().toString();
@@ -260,18 +265,18 @@ public class Assignmarksise extends AppCompatActivity {
                     stu1R5.setFocusable(true);
                 }
                 else
-                    {
-                        int R11 = Integer.parseInt(stu11);
-                        int R12 = Integer.parseInt(stu12);
-                        int R13 = Integer.parseInt(stu13);
-                        int R14 = Integer.parseInt(stu14);
-                        int R15 = Integer.parseInt(stu15);
-                        stu1total.setText(String.valueOf(R11 + R12 + R13 + R14 + R15));
-                    }
+                {
+                    int R11 = Integer.parseInt(stu11);
+                    int R12 = Integer.parseInt(stu12);
+                    int R13 = Integer.parseInt(stu13);
+                    int R14 = Integer.parseInt(stu14);
+                    int R15 = Integer.parseInt(stu15);
+                    stu1total.setText(String.valueOf(R11 + R12 + R13 + R14 + R15));
                 }
+            }
         });
 
-       totals22.setOnClickListener(new View.OnClickListener() {
+        totals22ise2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stu21=stu2R1.getText().toString();
@@ -331,7 +336,7 @@ public class Assignmarksise extends AppCompatActivity {
             }
         });
 
-        totals33.setOnClickListener(new View.OnClickListener() {
+        totals33ise2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stu31=stu3R1.getText().toString();
@@ -403,7 +408,7 @@ public class Assignmarksise extends AppCompatActivity {
                 stu23= stu2R3.getText().toString();
                 stu24= stu2R4.getText().toString();
                 stu25= stu2R5.getText().toString();
-               finalmarksstud2=stu2total.getText().toString();
+                finalmarksstud2=stu2total.getText().toString();
                 stu31= stu3R1.getText().toString();
                 stu32= stu3R2.getText().toString();
                 stu33= stu3R3.getText().toString();
@@ -416,14 +421,14 @@ public class Assignmarksise extends AppCompatActivity {
                     Snackbar.make(v, "Missing Field!", BaseTransientBottomBar.LENGTH_LONG).show();
                 } else {
                     Map<String, String> student1La1marks = new HashMap<String, String>();
-                    student1La1marks.put("ISE1",finalmarksstud1);
+                    student1La1marks.put("MSE",finalmarksstud1);
 
-                    mRootRef.child("Marks").child(stud1n).setValue(student1La1marks)
+                    mRootRef.child("Marks").child(stud1n).child("MSE").setValue(student1La1marks)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
 
-                                    Intent intent = new Intent(Assignmarksise.this,navActivity.class);
+                                    Intent intent = new Intent(Mse.this,navActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -431,21 +436,21 @@ public class Assignmarksise extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Assignmarksise.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Mse.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
 
 
                     // for stud2
                     Map<String, String> student2La1marks = new HashMap<String, String>();
-                    student2La1marks.put("ISE1",finalmarksstud2);
+                    student2La1marks.put("MSE",finalmarksstud2);
 
-                    mRootRef.child("Marks").child(stud2n).setValue(student2La1marks)
+                    mRootRef.child("Marks").child(stud2n).child("MSE").setValue(student2La1marks)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
 
-                                    Intent intent = new Intent(Assignmarksise.this,navActivity.class);
+                                    Intent intent = new Intent(Mse.this,navActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -453,7 +458,7 @@ public class Assignmarksise extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Assignmarksise.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Mse.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
 
@@ -461,14 +466,14 @@ public class Assignmarksise extends AppCompatActivity {
 
                     // for stud 3
                     Map<String, String> student3La1marks = new HashMap<String, String>();
-                    student3La1marks.put("ISE1",finalmarksstud3);
+                    student3La1marks.put("MSE",finalmarksstud3);
 
-                    mRootRef.child("Marks").child(stud3n).setValue(student3La1marks)
+                    mRootRef.child("Marks").child(stud3n).child("MSE").setValue(student3La1marks)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Assignmarksise.this, "Added Successfully", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(Assignmarksise.this,navActivity.class);
+                                    Toast.makeText(Mse.this, "Added Successfully", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(Mse.this,navActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -476,15 +481,16 @@ public class Assignmarksise extends AppCompatActivity {
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Assignmarksise.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Mse.this, " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
 
 
 
                 }
-               }
+            }
 
-           });
+        });
     }
+
 }

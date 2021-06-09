@@ -51,7 +51,7 @@ public class chooseExam extends AppCompatActivity {
         txt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(chooseExam.this, navActivity.class);
+                Intent intent = new Intent(chooseExam.this, Ise2.class);
                 intent.putExtra("stud1name",student1);
                 intent.putExtra("stud2name",student2);
                 intent.putExtra("stud3name",student3);
@@ -62,7 +62,7 @@ public class chooseExam extends AppCompatActivity {
         txt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(chooseExam.this, navActivity.class);
+                Intent intent = new Intent(chooseExam.this, Mse.class);
                 intent.putExtra("stud1name",student1);
                 intent.putExtra("stud2name",student2);
                 intent.putExtra("stud3name",student3);
@@ -73,7 +73,7 @@ public class chooseExam extends AppCompatActivity {
         txt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(chooseExam.this, navActivity.class);
+                Intent intent = new Intent(chooseExam.this, Ese.class);
                 intent.putExtra("stud1name",student1);
                 intent.putExtra("stud2name",student2);
                 intent.putExtra("stud3name",student3);

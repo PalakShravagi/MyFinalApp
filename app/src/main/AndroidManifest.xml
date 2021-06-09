@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Assignmarksise"></activity>
+        <activity android:name=".Ese"></activity>
+        <activity android:name=".Mse" />
+        <activity android:name=".Ise2" />
+        <activity android:name=".Assignmarksise" />
         <activity
             android:name=".chooseExam"
-            android:parentActivityName=".navActivity"></activity>
+            android:parentActivityName=".navActivity" />
         <activity android:name=".GroupsShowAdminViewModel" />
         <activity
             android:name=".ProfileAdmin"
