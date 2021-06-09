@@ -57,7 +57,7 @@ public class navActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         txt1 = (TextView) headerView.findViewById(R.id.textView);
         txt1.setText(mailid);
-
+        Toast.makeText(this, getIntent().getStringExtra("stud1name"), Toast.LENGTH_SHORT).show();
 
        // reference = FirebaseDatabase.getInstance().getReference("Users");
        // userID = user.getUid();
