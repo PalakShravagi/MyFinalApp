@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EAssess"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Choosestudent"></activity>
+        <activity android:name=".recyclemarks"></activity>
+        <activity android:name=".Choosestudent" />
         <activity android:name=".Ese" />
         <activity android:name=".Mse" />
         <activity android:name=".Ise2" />

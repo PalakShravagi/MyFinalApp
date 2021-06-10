@@ -25,9 +25,9 @@ public class Choosestudent extends AppCompatActivity {
 
 
 
-        student1 =getIntent().getStringExtra("stud11name").toString();
-        student2 =getIntent().getStringExtra("stud22name").toString();
-        student3 =getIntent().getStringExtra("stud33name").toString();
+        student1 =getIntent().getStringExtra("stud1name").toString();
+        student2 =getIntent().getStringExtra("stud2name").toString();
+        student3 =getIntent().getStringExtra("stud3name").toString();
         Log.i("stud1",student1);
         Log.i("stud1",student2);
         Log.i("stud1",student3);
@@ -35,9 +35,9 @@ public class Choosestudent extends AppCompatActivity {
         stud1 = findViewById(R.id.txtstu1);
         stud2 = findViewById(R.id.txtstu2);
         stud3 = findViewById(R.id.txtstu3);
-        stud1.setText(getIntent().getStringExtra("stud11name"));
-        stud2.setText(getIntent().getStringExtra("stud22name"));
-        stud3.setText(getIntent().getStringExtra("stud33name"));
+        stud1.setText(getIntent().getStringExtra("stud1name"));
+        stud2.setText(getIntent().getStringExtra("stud2name"));
+        stud3.setText(getIntent().getStringExtra("stud3name"));
         //final String stud1n = getIntent().getStringExtra("stud1name").toString();
         //final String stud2n = getIntent().getStringExtra("stud2name").toString();
         //final String stud3n = getIntent().getStringExtra("stud3name").toString();

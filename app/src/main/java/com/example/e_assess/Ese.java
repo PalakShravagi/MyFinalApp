@@ -421,7 +421,7 @@ public class Ese extends AppCompatActivity {
                     Snackbar.make(v, "Missing Field!", BaseTransientBottomBar.LENGTH_LONG).show();
                 } else {
                     Map<String, String> student1La1marks = new HashMap<String, String>();
-                    student1La1marks.put("Total",finalmarksstud1);
+                    student1La1marks.put("TotalEse",finalmarksstud1);
                     student1La1marks.put("Objective Achieved",stu11);
                     student1La1marks.put("Result And Analysis",stu12);
                     student1La1marks.put("Novelty",stu13);
@@ -448,7 +448,7 @@ public class Ese extends AppCompatActivity {
 
                     // for stud2
                     Map<String, String> student2La1marks = new HashMap<String, String>();
-                    student2La1marks.put("Total",finalmarksstud2);
+                    student2La1marks.put("TotalEse",finalmarksstud2);
                     student2La1marks.put("Objective Achieved",stu21);
                     student2La1marks.put("Result And Analysis",stu22);
                     student2La1marks.put("Novelty",stu23);
@@ -476,7 +476,7 @@ public class Ese extends AppCompatActivity {
 
                     // for stud 3
                     Map<String, String> student3La1marks = new HashMap<String, String>();
-                    student3La1marks.put("Total",finalmarksstud3);
+                    student3La1marks.put("TotalEse",finalmarksstud3);
                     student3La1marks.put("Objective Achieved",stu31);
                     student3La1marks.put("Result And Analysis",stu32);
                     student3La1marks.put("Novelty",stu33);
