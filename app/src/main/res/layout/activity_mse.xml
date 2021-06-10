@@ -366,7 +366,7 @@
                             android:text="Demonstration :"
                             android:textColor="#FFFFFF"
                             android:layout_weight="1"
-                            android:gravity="center"
+                          
                             android:textSize="16sp"
                             android:textStyle="bold" />
                         <EditText
