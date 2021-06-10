@@ -10,15 +10,12 @@
         android:id="@+id/relativeLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:background="@drawable/card_border"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.108"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-41dp">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="113dp">
 
 
         <LinearLayout
@@ -27,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_gravity="bottom|center|left"
-            android:layout_marginLeft="16.0dip"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="26.0dip"
-            android:layout_marginRight="16.0dip"
+            android:layout_marginRight="60dp"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -75,20 +72,19 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="272dp"
-        android:layout_height="56dp"
-        android:gravity="center"
-        android:padding="10dp"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Select Group"
         android:textColor="#C51162"
-        android:textSize="28dp"
-        android:textStyle="bold"
+        android:textColorHint="#C51162"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.06" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
