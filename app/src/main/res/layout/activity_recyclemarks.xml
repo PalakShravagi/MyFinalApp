@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignmarksise">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="#A8D8F0"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp">
+
+
+                    <TextView
+                        android:id="@+id/textViewGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="ISE 1 Marks"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/stud1ise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="1st   Student Name"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rubric1"
+                    android:textColorHint="#FFFFFF">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#00ACC2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Problem Statement Identification :"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rubric1stud1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:hint="out of 5"
+                            android:layout_weight="3"
+                            android:singleLine="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rubric2"
+                    android:textColorHint="#FFFFFF">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#00ACC2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Objective defined :"
+                            android:textColor="#FFFFFF"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/rubric2stud1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:hint="out of 5"
+                            android:layout_weight="3"
+                            android:singleLine="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rubric3"
+                    android:textColorHint="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#00ACC2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Tools and Methodology :"
+                            android:layout_weight="1"
+                            android:textColor="#FFFFFF"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/rubric3stud1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:hint="out of 5"
+                            android:layout_weight="3"
+                            android:singleLine="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric4"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question And Answers :"
+                                android:textColor="#FFFFFF"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric4stud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rubric5"
+                    android:textColorHint="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#00ACC2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Presentation Skills :"
+                            android:textColor="#FFFFFF"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/rubric5stud1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:hint="out of 5"
+                            android:layout_weight="3"
+                            android:singleLine="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/total1"
+                    android:textColorHint="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#00ACC2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Total Marks :"
+                            android:textColor="#FFFFFF"
+                            android:layout_weight="1"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Totalstud1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:hint="out of 25"
+                            android:layout_weight="3"
+                            android:singleLine="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:background="#A8D8F0"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/blank11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp">
+
+
+                        <TextView
+                            android:id="@+id/ise2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="ISE 2 Marks"
+                            android:textColor="#000000"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric1ise2"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Objective achieved :"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:layout_weight="1"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric1ise2stud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric2ise2"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Project Design :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric2ise2stud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric3ise2"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Demonstration :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric3ise2stud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rubric4ise2"
+                            android:textColorHint="#FFFFFF">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:background="#00ACC2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="Incorporation of suggestion :"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/rubric4ise2stud1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:hint="out of 5"
+                                    android:layout_weight="3"
+                                    android:singleLine="false"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric5ise2"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question and Answer :"
+                                android:textColor="#FFFFFF"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric5ise2stud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1ise2"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Total Marks :"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+
+                                android:layout_weight="1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/Totalise22"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 25"
+                                android:layout_weight="3"
+
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:background="#A8D8F0"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/blank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp">
+
+
+                        <TextView
+                            android:id="@+id/mse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="MSE Marks"
+                            android:textColor="#000000"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric1mse"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Objective achieved :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric1msestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric2mse"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Project Design :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric2msestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric3mse"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Demonstration :"
+                                android:textColor="#FFFFFF"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric3msestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rubric4mse"
+                            android:textColorHint="#FFFFFF">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:background="#00ACC2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="Incorporation of suggestion :"
+                                    android:layout_weight="1"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/rubric4msestud1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:hint="out of 5"
+                                    android:layout_weight="3"
+                                    android:singleLine="false"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric5mse"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question and Answer :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric5msestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1mse"
+                        android:textColorHint="#FFFFFF">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Total Marks :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/Totalmse11"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 25"
+                                android:layout_weight="3"
+
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:background="#A8D8F0"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/blankmse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp">
+
+
+                        <TextView
+                            android:id="@+id/ese11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="ESE Marks"
+                            android:textColor="#000000"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric1ese"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Objective achieved :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric1esestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric2ese"
+                        android:textColorHint="#FFFFFF">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Result and Analysis :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric2esestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric3ese"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Novelty :"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric3esestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rubric4ese"
+                            android:textColorHint="#FFFFFF">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:background="#00ACC2">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="Presentation Skills :"
+                                    android:textColor="#FFFFFF"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/rubric4esestud1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:hint="out of 5"
+                                    android:layout_weight="3"
+                                    android:singleLine="false"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rubric5ese"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Application(social,dept,eco,etc) :"
+                                android:textColor="#FFFFFF"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/rubric5esestud1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 5"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/total1ese"
+                        android:textColorHint="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#00ACC2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Total Marks :"
+                                android:textColor="#FFFFFF"
+                                android:layout_weight="1"
+
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/Totalese"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:hint="out of 25"
+                                android:layout_weight="3"
+                                android:singleLine="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:background="#A8D8F0"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/blankese11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>

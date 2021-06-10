@@ -444,11 +444,11 @@ public class Ise2 extends AppCompatActivity {
                     // for stud2
                     Map<String, String> student2La1marks = new HashMap<String, String>();
 
-                    student2La1marks.put("Total",finalmarksstud2);
-                    student2La1marks.put("Objective Achieved",stu21);
-                    student2La1marks.put("Project Design",stu22);
-                    student2La1marks.put("Demonstration",stu23);
-                    student2La1marks.put("Incorporation of Suggesstion",stu24);
+                    student2La1marks.put("Totalise2",finalmarksstud2);
+                    student2La1marks.put("Objective Achieved ise2",stu21);
+                    student2La1marks.put("Project Design ise2",stu22);
+                    student2La1marks.put("Demonstration ise2",stu23);
+                    student2La1marks.put("Incorporation of Suggesstion ise2",stu24);
                     student2La1marks.put("Question And Answer",stu25);
                     mRootRef.child("Marks").child(stud2n).child("ISE2").setValue(student2La1marks)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -472,12 +472,12 @@ public class Ise2 extends AppCompatActivity {
                     // for stud 3
                     Map<String, String> student3La1marks = new HashMap<String, String>();
 
-                    student3La1marks.put("Total",finalmarksstud3);
-                    student3La1marks.put("Objective Achieved",stu31);
-                    student3La1marks.put("Project Design",stu32);
-                    student3La1marks.put("Demonstration",stu33);
-                    student3La1marks.put("Incorporation of Suggesstion",stu34);
-                    student3La1marks.put("Question And Answer",stu35);
+                    student3La1marks.put("Totalise2",finalmarksstud3);
+                    student3La1marks.put("Objective Achieved ise2",stu31);
+                    student3La1marks.put("Project Design ise2",stu32);
+                    student3La1marks.put("Demonstration ise2",stu33);
+                    student3La1marks.put("Incorporation of Suggesstion ise2",stu34);
+                    student3La1marks.put("Question And Answer ise2",stu35);
                     mRootRef.child("Marks").child(stud3n).child("ISE2").setValue(student3La1marks)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
