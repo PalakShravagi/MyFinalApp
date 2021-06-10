@@ -47,11 +47,6 @@ public class Recyclemarks extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    }
-                    }
-                }
 
             }
 
@@ -111,7 +106,6 @@ public class Recyclemarks extends AppCompatActivity {
                     // end of the trial
 
 
-                    return root;
 
                 }
             }
